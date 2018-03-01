@@ -3,16 +3,13 @@ package hybrid_retail_store
 // Defines an order from the customer.
 type Order struct {
 	// What the customer is ordering.
-	Item               string
+	Item               string `json:"item"`
 	// How many of the items is the customer ordering.
-	Count              int
+	Count              int `json:"count"`
 	// Where the item is being shipped.
-	DestinationZipCode int
+	DestinationZipCode int `json:"destination_zip_code"`
 	// How expensive this item is to ship.
-	Weight int
+	Weight int `json:"weight"`
 	// How soon they need it.
-	Urgency int
-
-	targetFulfillmentCenter FulFillmentCenter
+	Urgency int `json:"urgency"`
 }
-
